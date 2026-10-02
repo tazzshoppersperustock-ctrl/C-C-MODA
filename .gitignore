@@ -1,0 +1,10 @@
+# Screenshots de testing (no necesitan subir al repo)
+screenshot_*.png
+
+# Archivos del sistema Windows
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Logs
+*.log

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIC Moda — Confección Peruana de Exportación (Algodón Pima &amp; Heavyweight)</title>
+  <meta name="description" content="CIC Moda: moda contemporánea peruana. Polos en algodón Pima 24/1, poleras heavyweight y pantalones con envíos nacionales e internacionales a Ecuador y Chile vía Serpost.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/jpeg" href="assets/images/logo_cic_moda.jpg">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="badge-origin">
+      <span>🇵🇪</span> 
+      <span class="badge-text-full">100% Algodón Pima Peruano &amp; Franela Pesada</span>
+      <span class="badge-text-mobile">Algodón Pima Peruano</span>
+    </div>
+    <div>
+      📦 Envíos a todo el Perú y exportación a <strong>Ecuador y Chile</strong> vía <strong>Serpost</strong> con tracking en tiempo real.
+    </div>
+    <div class="currency-selector">
+      <span class="currency-label">Moneda:</span>
+      <select id="currency-select" title="Selecciona tu moneda">
+        <option value="PEN" selected>S/ Soles (PEN)</option>
+        <option value="USD">$ Dólares (USD)</option>
+        <option value="CLP">$ Pesos (CLP)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Sticky Main Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo-link" onclick="if(document.getElementById('admin-view-wrapper').classList.contains('active')) toggleAdminView();">
+        <img src="assets/images/logo_cic_moda.jpg" alt="CIC Moda" class="brand-logo-img">
+        <span class="brand-name">
+          <span class="brand-name-main">CIC Moda</span>
+          <span class="brand-name-sub">Confección Peruana</span>
+        </span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#catalogo" class="nav-link" onclick="document.querySelector('.filter-pill[data-category=\'polos\']').click();">Polos Pima</a></li>
+          <li><a href="#catalogo" class="nav-link" onclick="document.querySelector('.filter-pill[data-category=\'poleras\']').click();">Poleras Heavy</a></li>
+          <li><a href="#catalogo" class="nav-link" onclick="document.querySelector('.filter-pill[data-category=\'pantalones\']').click();">Pantalones</a></li>
+          <li><a href="#rastreo" class="nav-link">Rastreo Serpost</a></li>
+          <li><a href="javascript:void(0)" onclick="openSizeGuide('polos', 'Guía de Tallas General')" class="nav-link">Guía de Medidas</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Admin Backoffice Switcher -->
+        <button id="admin-toggle-btn" class="admin-mode-toggle" onclick="toggleAdminView()">
+          <span>⚙️</span>
+          <span class="admin-label">Panel Negocio</span>
+        </button>
+
+        <!-- Cart Button -->
+        <button class="btn-icon-action cart-btn" onclick="openCartDrawer()">
+          <span>🛒</span>
+          <span class="cart-label">Bolsa</span>
+          <span id="cart-badge" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- STORE VIEW WRAPPER -->
+  <main id="store-view-wrapper">
+
+    <!-- Hero Editorial Section -->
+    <section class="hero-editorial">
+      <div class="hero-content">
+        <div class="hero-subtitle">Colección Textil Nacional • Lima 2026</div>
+        <h1 class="hero-title">
+          ALTA CONFECCIÓN PERUANA CONTEMPORÁNEA.
+        </h1>
+        <p class="hero-description">
+          Prendas construidas con el algodón Pima más fino del mundo y franelas heavyweight de hasta 450 GSM. Cortes oversize equilibrados, caída pesada y acabados artesanales listos para exportación.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#catalogo" class="btn-primary">
+            Explorar Colección <span>↓</span>
+          </a>
+          <a href="#rastreo" class="btn-secondary">
+            📍 Rastrear Envío Serpost
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-media-wrapper">
+        <img src="assets/images/hero_collection.jpg" alt="C&amp;C Campaña Textil Peruana" class="hero-main-img">
+        <div class="hero-media-badge">
+          <h4>Pima &amp; Heavyweight Knit</h4>
+          <p>Drop 01 — Envíos a Perú, Ecuador y Chile</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillars / Value Badges -->
+    <section class="pillars-bar">
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <div class="pillar-icon">🌱</div>
+          <div class="pillar-info">
+            <h4>Algodón Pima 100% Peruano</h4>
+            <p>Fibra extra larga de tacto sedoso, transpirable y sin pelotitas.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon">⚖️</div>
+          <div class="pillar-info">
+            <h4>Densidad Heavyweight</h4>
+            <p>Tejidos pesados de 220 a 450 GSM con caída arquitectónica.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon">📦</div>
+          <div class="pillar-info">
+            <h4>Envíos vía Serpost</h4>
+            <p>Cobertura nacional e internacional a Ecuador y Chile con guía certificada.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon">🔒</div>
+          <div class="pillar-info">
+            <h4>Pagos Automatizados</h4>
+            <p>Tarjetas débito/crédito, Yape, BCP y PayPal con confirmación instantánea.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Catalog Section -->
+    <section id="catalogo" class="catalog-section">
+      <div class="catalog-header">
+        <div>
+          <div class="section-tag">Colección Activa</div>
+          <h2 class="section-title">Prendas Esenciales C&amp;C</h2>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="category-filter-pills">
+          <button class="filter-pill active" data-category="all">Todos (9)</button>
+          <button class="filter-pill" data-category="polos">Polos Pima</button>
+          <button class="filter-pill" data-category="poleras">Poleras &amp; Hoodies</button>
+          <button class="filter-pill" data-category="pantalones">Pantalones</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Grid of Products -->
+      <div id="products-container" class="products-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Serpost Tracking Section -->
+    <section id="rastreo" class="tracking-banner">
+      <div class="tracking-grid">
+        <div>
+          <div class="section-tag">Logística Postal Internacional</div>
+          <h2 style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; text-transform: uppercase; margin: 4px 0 10px;">
+            Seguimiento de Envíos Serpost
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Rastrea en tiempo real el desplazamiento de tu pedido desde nuestros talleres en Lima hasta tu domicilio en Perú, Ecuador o Chile con el código oficial de Serpost.
+          </p>
+
+          <div class="tracking-input-group">
+            <input type="text" id="tracking-query-input" class="tracking-input" placeholder="Ingresa tu código (Ej: CC-PE-88491 o CC-EC-10924)">
+            <button class="btn-primary" onclick="checkSerpostTracking()">
+              Rastrear
+            </button>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--text-tertiary); margin-top: 8px;">
+            * También puedes hacer clic sobre cualquier orden para autocompletar.
+          </div>
+        </div>
+
+        <div id="tracking-result-box">
+          <div style="background: var(--canvas-alt); border-radius: 12px; padding: 24px; text-align: center; color: var(--text-secondary);">
+            <div style="font-size: 2rem; margin-bottom: 8px;">📬</div>
+            <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">Consulta el estado de tu paquete</h4>
+            <p style="font-size: 0.85rem; margin-top: 4px;">Ingresa el código que recibiste al completar tu compra para ver las etapas de Serpost.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ADMIN / BACKOFFICE VIEW WRAPPER -->
+  <main id="admin-view-wrapper" class="admin-view-container">
+    <div class="admin-top-bar">
+      <div class="admin-title-group">
+        <span style="font-family: var(--font-tech); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent-sand);">ADMINISTRACIÓN &amp; OPERACIONES</span>
+        <h2>Panel de Control C&amp;C Studio</h2>
+      </div>
+      <div>
+        <button class="btn-primary" style="background:#fff; color:#000;" onclick="toggleAdminView()">
+          🛍️ Volver a la Tienda
+        </button>
+      </div>
+    </div>
+
+    <!-- Financial KPIs & Margins -->
+    <div class="admin-kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Ventas Totales Brutas</div>
+        <div id="admin-kpi-revenue" class="kpi-value">S/ 0.00</div>
+        <div class="kpi-subtext">Ingresos por e-commerce</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Costo de Confección (COGS)</div>
+        <div id="admin-kpi-cost" class="kpi-value" style="color: #64748b;">S/ 0.00</div>
+        <div style="font-size: 0.78rem; color: var(--text-tertiary);">Tela Pima, talleres y avíos</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Margen Neto de Ganancia</div>
+        <div id="admin-kpi-profit" class="kpi-value" style="color: #059669;">S/ 0.00 (0%)</div>
+        <div class="kpi-subtext">Utilidad neta calculada</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Inventario Total en Almacén</div>
+        <div id="admin-kpi-stock" class="kpi-value">0 prendas</div>
+        <div style="font-size: 0.78rem; color: var(--text-tertiary);">Desglosado por talla (S, M, L, XL)</div>
+      </div>
+    </div>
+
+    <!-- Inventory Stock Management -->
+    <div class="admin-section-box">
+      <div class="admin-section-header">
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; text-transform: uppercase;">Control de Stock &amp; Margen por Prenda</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Inventario en tiempo real sincronizado con las compras del cliente.</p>
+        </div>
+      </div>
+
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Prenda / Categoría</th>
+            <th>PVP (Venta)</th>
+            <th>Costo Confección</th>
+            <th>Margen Unitario</th>
+            <th>Stock Actual por Tallas</th>
+            <th>Acción Rápida</th>
+          </tr>
+        </thead>
+        <tbody id="admin-inventory-tbody">
+          <!-- Rendered via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Orders & Serpost Dispatch Management -->
+    <div class="admin-section-box">
+      <div class="admin-section-header">
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; text-transform: uppercase;">Gestión de Órdenes &amp; Despachos Serpost</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Control de pedidos recibidos, país de entrega y avance de etapas postales.</p>
+        </div>
+      </div>
+
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Nº Orden</th>
+            <th>Fecha</th>
+            <th>Cliente</th>
+            <th>Destino (País/Ciudad)</th>
+            <th>Total Cobrado</th>
+            <th>Margen Ganancia</th>
+            <th>Estado Serpost</th>
+            <th>Cambiar Etapa</th>
+          </tr>
+        </thead>
+        <tbody id="admin-orders-tbody">
+          <!-- Rendered via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Product & Size Guide Modal -->
+  <div id="product-modal" class="modal-overlay" onclick="if(event.target === this) closeModal();">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeModal()" title="Cerrar ventana">✕</button>
+      <div id="modal-body-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Slide-Over Drawer -->
+  <div id="cart-backdrop" class="cart-drawer-backdrop" onclick="closeCartDrawer()"></div>
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-title">Tu Bolsa de Compras</div>
+      <button class="modal-close-btn" onclick="closeCartDrawer()" style="position:static;">✕</button>
+    </div>
+
+    <div id="cart-items-container" class="cart-items-list">
+      <!-- Items dynamically rendered -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="serpost-shipping-estimator">
+        <label>📍 Destino de Envío (Vía Serpost):</label>
+        <select onchange="onShippingOptionChange(this.value)">
+          <option value="lima">🇵🇪 Lima Metropolitana (S/ 10.00)</option>
+          <option value="provincias">🇵🇪 Provincias del Perú (S/ 18.00)</option>
+          <option value="ecuador">🇪🇨 Ecuador - Postal Internacional (S/ 45.00)</option>
+          <option value="chile">🇨🇱 Chile - Postal Internacional (S/ 55.00)</option>
+        </select>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Subtotal Prendas</span>
+        <span id="cart-subtotal">S/ 0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Tarifa Postal Serpost</span>
+        <span id="cart-shipping-cost">S/ 0.00</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Total a Pagar</span>
+        <span id="cart-total">S/ 0.00</span>
+      </div>
+
+      <button class="btn-checkout-now" onclick="proceedToCheckout()" style="margin-top: 14px;">
+        Finalizar Compra Segura →
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Hub -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/images/logo_cic.svg" alt="C&amp;C Brand" style="height: 40px; filter: brightness(0) invert(1); margin-bottom: 12px;">
+        <p>
+          C&amp;C es una marca de indumentaria contemporánea nacida en Lima, Perú. Confeccionamos exclusivamente con algodón Pima peruano y franelas pesadas certificadas, exportando moda urbana de alta durabilidad a Latinoamérica y el mundo.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Colecciones</h5>
+        <ul class="footer-links">
+          <li><a href="#catalogo" onclick="document.querySelector('.filter-pill[data-category=\'polos\']').click();">Polos Pima 24/1</a></li>
+          <li><a href="#catalogo" onclick="document.querySelector('.filter-pill[data-category=\'poleras\']').click();">Poleras Heavy 450 GSM</a></li>
+          <li><a href="#catalogo" onclick="document.querySelector('.filter-pill[data-category=\'pantalones\']').click();">Pantalones Cargo &amp; Denim</a></li>
+          <li><a href="javascript:void(0)" onclick="openSizeGuide('polos', 'Guía de Tallas')">Tabla de Medidas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Logística &amp; Destinos</h5>
+        <ul class="footer-links">
+          <li><a href="#rastreo">Rastreo Serpost Postal</a></li>
+          <li><a href="#rastreo">Envíos a Ecuador</a></li>
+          <li><a href="#rastreo">Envíos a Chile</a></li>
+          <li><a href="#rastreo">Cobertura Nacional Perú</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Garantía &amp; Pagos</h5>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)">Algodón Pima Certificado</a></li>
+          <li><a href="javascript:void(0)">Visa / Mastercard / Amex</a></li>
+          <li><a href="javascript:void(0)">Yape / Plin / BCP</a></li>
+          <li><a href="javascript:void(0)" onclick="toggleAdminView()">Acceso Backoffice</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 C&amp;C Studio Textil S.A.C. Todos los derechos reservados. Lima, Perú.</div>
+      <div>Hecho con orgullo en Perú • Exportación Serpost</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
