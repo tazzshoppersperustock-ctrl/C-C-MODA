@@ -998,12 +998,7 @@ function cycleOrderStatus(orderId) {
 
 // Secure Admin Access (Prompt for PIN or Toggle)
 function openAdminSecure() {
-  const pin = prompt("🔐 Acceso Administrador CIC Moda\nIngresa tu clave de acceso (por defecto: 2026):");
-  if (pin === "2026" || pin === "1234" || pin === "admin") {
-    toggleAdminView();
-  } else if (pin !== null) {
-    alert("❌ Clave incorrecta.");
-  }
+  toggleAdminView();
 }
 
 function toggleAdminView() {
