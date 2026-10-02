@@ -1,142 +1,186 @@
-// C&C Studio - E-commerce Engine & State Management
+// CIC Moda — E-commerce Engine & State Management
 
 const DEFAULT_PRODUCTS = [
+  // --- POLOS HOMBRE ---
   {
-    id: "polo-pima-raw-black",
-    title: "Polo Pima Oversize Noir Raw",
-    category: "polos",
+    id: "polo-hombre-noir",
+    title: "Polo Pima Oversize Boxy Noir",
+    category: "polos-hombre",
     price: 89.00,
     cost: 38.00,
     fabric: "100% Algodón Pima Peruano 24/1 • 220 GSM • Cuello cerrado acanalado",
     origin: "Confección Lima, Perú",
     imgFront: "assets/images/polo_negro_pima_front.jpg",
     imgBack: "assets/images/polo_negro_pima_back.jpg",
-    stock: { S: 12, M: 18, L: 8, XL: 4 }
+    stock: { S: 14, M: 20, L: 12, XL: 6 }
   },
   {
-    id: "polo-pima-chalk-white",
+    id: "polo-hombre-blanco",
     title: "Polo Pima Boxy Chalk White",
-    category: "polos",
+    category: "polos-hombre",
     price: 89.00,
     cost: 38.00,
-    fabric: "100% Algodón Pima Peinado 230 GSM • Corte cuadrado y caída densa",
+    fabric: "100% Algodón Pima Peinado 230 GSM • Corte boxy estructurado",
     origin: "Algodón Valle de Piura",
-    imgFront: "assets/images/polo_blanco_oversize.jpg",
+    imgFront: "assets/images/polo_hombre_blanco.jpg",
     imgBack: "assets/images/polo_blanco_oversize_detail.jpg",
-    stock: { S: 15, M: 12, L: 6, XL: 2 }
+    stock: { S: 16, M: 18, L: 10, XL: 4 }
   },
   {
-    id: "polo-pima-olive",
+    id: "polo-hombre-oliva",
     title: "Polo Minimal Earth Olive Pima",
-    category: "polos",
+    category: "polos-hombre",
     price: 95.00,
     cost: 41.00,
-    fabric: "Pima teñido en frío reactivo • Tacto ultra sedoso anti-pilling",
+    fabric: "Pima teñido reactivo en frío • Tacto ultra sedoso anti-pilling",
     origin: "Hilado Nacional 50/1",
     imgFront: "assets/images/polo_verde_oliva.jpg",
     imgBack: "assets/images/polo_blanco_oversize_detail.jpg",
-    stock: { S: 8, M: 14, L: 10, XL: 5 }
+    stock: { S: 10, M: 15, L: 8, XL: 5 }
   },
+
+  // --- POLOS MUJER ---
   {
-    id: "hoodie-heavy-anthracite",
-    title: "Hoodie Heavyweight 450 GSM Anthracite",
-    category: "poleras",
-    price: 179.00,
-    cost: 78.00,
-    fabric: "Franela pesada 100% algodón peruano • Capucha doble tela sin cordones",
-    origin: "Gamarra Premium Export",
-    imgFront: "assets/images/polera_hoodie_antracita.jpg",
-    imgBack: "assets/images/polera_hoodie_arena.jpg",
-    stock: { S: 9, M: 15, L: 7, XL: 3 }
-  },
-  {
-    id: "hoodie-desert-sand",
-    title: "Hoodie Dune Desert Sand 420 GSM",
-    category: "poleras",
-    price: 179.00,
-    cost: 78.00,
-    fabric: "Algodón perchado grueso • Bolsillo canguro invisible con costura francesa",
+    id: "polo-mujer-crop-white",
+    title: "Polo Pima Baby Tee Off-White",
+    category: "polos-mujer",
+    price: 79.00,
+    cost: 32.00,
+    fabric: "100% Algodón Pima Peinado 210 GSM • Rib acanalado suave de ajuste fino",
     origin: "Confección Lima, Perú",
-    imgFront: "assets/images/polera_hoodie_arena.jpg",
-    imgBack: "assets/images/polera_hoodie_antracita.jpg",
-    stock: { S: 14, M: 8, L: 4, XL: 2 }
+    imgFront: "assets/images/polo_mujer_blanco.jpg",
+    imgBack: "assets/images/polo_blanco_oversize_detail.jpg",
+    stock: { S: 15, M: 18, L: 12, XL: 5 }
   },
   {
-    id: "crewneck-deep-night",
-    title: "Crewneck Heavy Rib Deep Night",
-    category: "poleras",
-    price: 149.00,
-    cost: 65.00,
-    fabric: "Franela reactiva 400 GSM • Ribs 2x2 elásticos reforzados en cuello y puños",
-    origin: "100% Algodón Peruano",
-    imgFront: "assets/images/polera_crewneck_negro.jpg",
-    imgBack: "assets/images/polera_hoodie_antracita.jpg",
-    stock: { S: 11, M: 16, L: 12, XL: 6 }
+    id: "polo-mujer-noir",
+    title: "Polo Pima Relaxed Fit Noir Drop",
+    category: "polos-mujer",
+    price: 85.00,
+    cost: 35.00,
+    fabric: "100% Pima Extra Largo 220 GSM • Silueta fluida de caída natural",
+    origin: "Algodón Piura Certificado",
+    imgFront: "assets/images/polo_mujer_negro_clean.jpg",
+    imgBack: "assets/images/polo_negro_pima_back.jpg",
+    stock: { S: 12, M: 16, L: 10, XL: 4 }
   },
   {
-    id: "pant-cargo-heavy",
-    title: "Pantalón Cargo Heavy Utility Raven",
-    category: "pantalones",
-    price: 169.00,
-    cost: 72.00,
-    fabric: "Dril pesado 100% algodón • 6 bolsillos funcionales con fuelle • Regulador en botapie",
-    origin: "Confección Lima, Perú",
-    imgFront: "assets/images/pantalon_cargo_heavy.jpg",
-    imgBack: "assets/images/pantalon_parachute_negro.jpg",
-    stock: { S: 7, M: 12, L: 5, XL: 1 }
+    id: "polo-mujer-terracota",
+    title: "Polo Pima Earth Terracota",
+    category: "polos-mujer",
+    price: 85.00,
+    cost: 36.00,
+    fabric: "Algodón Pima teñido botánico • Cuello acanalado y corte contemporáneo",
+    origin: "Confección Artesanal Lima",
+    imgFront: "assets/images/polo_mujer_terracota.jpg",
+    imgBack: "assets/images/polo_blanco_oversize_detail.jpg",
+    stock: { S: 14, M: 15, L: 8, XL: 3 }
+  },
+
+  // --- JEANS HOMBRE ---
+  {
+    id: "jeans-hombre-indigo",
+    title: "Jeans Straight Raw Indigo 14 oz",
+    category: "jeans-hombre",
+    price: 179.00,
+    cost: 76.00,
+    fabric: "Denim rígido 14 oz 100% algodón peruano • Tiro medio y corte recto tradicional",
+    origin: "Denim Premium Peruano",
+    imgFront: "assets/images/jeans_hombre_indigo.jpg",
+    imgBack: "assets/images/pantalon_denim_vintage.jpg",
+    stock: { S: 8, M: 14, L: 10, XL: 4 }
   },
   {
-    id: "pant-denim-stone",
-    title: "Pantalón Wide-Leg Denim Stone Wash",
-    category: "pantalones",
+    id: "jeans-hombre-stonewash",
+    title: "Jeans Wide-Leg Vintage Stone Wash",
+    category: "jeans-hombre",
     price: 189.00,
     cost: 82.00,
-    fabric: "Denim rígido 13.5 oz algodón peruano • Lavado ácido artesanal y tiro relajado",
-    origin: "Hecho en Perú",
-    imgFront: "assets/images/pantalon_denim_vintage.jpg",
-    imgBack: "assets/images/pantalon_cargo_heavy.jpg",
-    stock: { S: 6, M: 10, L: 8, XL: 3 }
+    fabric: "Denim 13.5 oz algodón nacional • Lavado vintage claro con desgaste suave",
+    origin: "Lavandería Textil Lima",
+    imgFront: "assets/images/jeans_hombre_denim.jpg",
+    imgBack: "assets/images/pantalon_denim_vintage.jpg",
+    stock: { S: 7, M: 12, L: 9, XL: 3 }
+  },
+
+  // --- JEANS MUJER ---
+  {
+    id: "jeans-mujer-highwaist",
+    title: "Jeans Wide-Leg High Waist Sky Blue",
+    category: "jeans-mujer",
+    price: 179.00,
+    cost: 75.00,
+    fabric: "Denim 12.5 oz con 2% confort stretch • Tiro alto estilizador y pierna ancha",
+    origin: "Confección Lima, Perú",
+    imgFront: "assets/images/jeans_mujer_denim.jpg",
+    imgBack: "assets/images/pantalon_denim_vintage.jpg",
+    stock: { S: 10, M: 16, L: 11, XL: 4 }
   },
   {
-    id: "pant-parachute-obsidian",
-    title: "Pantalón Parachute Ripstop Obsidian",
-    category: "pantalones",
-    price: 159.00,
-    cost: 68.00,
-    fabric: "Tejido técnico ligero antidesgarro • Cintura elástica con tanca y rodillas preformadas",
-    origin: "Diseño Contemporáneo C&C",
-    imgFront: "assets/images/pantalon_parachute_negro.jpg",
-    imgBack: "assets/images/pantalon_cargo_heavy.jpg",
-    stock: { S: 10, M: 14, L: 6, XL: 4 }
+    id: "jeans-mujer-vintage",
+    title: "Jeans Mom Fit Vintage Mid-Blue",
+    category: "jeans-mujer",
+    price: 169.00,
+    cost: 72.00,
+    fabric: "100% Algodón rígido premium • Corte clásico noventero tiro alto y tobillo ajustado",
+    origin: "Denim Nacional Peruano",
+    imgFront: "assets/images/jeans_mujer_vintage.jpg",
+    imgBack: "assets/images/pantalon_denim_vintage.jpg",
+    stock: { S: 9, M: 15, L: 8, XL: 2 }
+  },
+  {
+    id: "jeans-mujer-straight",
+    title: "Jeans Straight Leg Deep Indigo",
+    category: "jeans-mujer",
+    price: 175.00,
+    cost: 74.00,
+    fabric: "Denim índigo profundo con acabado siliconado suave • Ajuste recto favorecedor",
+    origin: "Confección Lima, Perú",
+    imgFront: "assets/images/jeans_mujer_straight.jpg",
+    imgBack: "assets/images/pantalon_denim_vintage.jpg",
+    stock: { S: 11, M: 14, L: 9, XL: 3 }
   }
 ];
 
 const SIZE_CHARTS = {
-  polos: {
+  "polos-hombre": {
+    name: "Polos Hombre (Corte Boxy / Oversize)",
     headers: ["Talla", "Pecho (cm)", "Largo (cm)", "Hombro (cm)", "Manga (cm)"],
     rows: [
-      ["S", "108 cm", "72 cm", "50 cm", "22 cm"],
-      ["M", "114 cm", "74 cm", "52 cm", "23 cm"],
-      ["L", "120 cm", "76 cm", "54 cm", "24 cm"],
-      ["XL", "126 cm", "78 cm", "56 cm", "25 cm"]
+      ["S", "106 cm", "71 cm", "49 cm", "22 cm"],
+      ["M", "112 cm", "73 cm", "51 cm", "23 cm"],
+      ["L", "118 cm", "75 cm", "53 cm", "24 cm"],
+      ["XL", "124 cm", "77 cm", "55 cm", "25 cm"]
     ]
   },
-  poleras: {
-    headers: ["Talla", "Pecho (cm)", "Largo (cm)", "Hombro (cm)", "Manga (cm)"],
+  "polos-mujer": {
+    name: "Polos Mujer (Corte Regular / Baby Tee)",
+    headers: ["Talla", "Busto (cm)", "Largo (cm)", "Hombro (cm)", "Cintura (cm)"],
     rows: [
-      ["S", "118 cm", "68 cm", "56 cm", "60 cm"],
-      ["M", "124 cm", "70 cm", "58 cm", "62 cm"],
-      ["L", "130 cm", "73 cm", "60 cm", "64 cm"],
-      ["XL", "136 cm", "76 cm", "62 cm", "66 cm"]
+      ["S", "88 - 92 cm", "54 cm", "38 cm", "68 - 72 cm"],
+      ["M", "93 - 97 cm", "56 cm", "40 cm", "73 - 77 cm"],
+      ["L", "98 - 104 cm", "58 cm", "42 cm", "78 - 84 cm"],
+      ["XL", "105 - 110 cm", "60 cm", "44 cm", "85 - 90 cm"]
     ]
   },
-  pantalones: {
-    headers: ["Talla (US)", "Cintura (cm)", "Cadera (cm)", "Largo (cm)", "Tiro (cm)"],
+  "jeans-hombre": {
+    name: "Jeans Hombre (Straight & Wide-Leg)",
+    headers: ["Talla (US)", "Cintura (cm)", "Cadera (cm)", "Largo Total (cm)", "Tiro (cm)"],
     rows: [
-      ["S (30)", "78 - 82 cm", "104 cm", "104 cm", "32 cm"],
-      ["M (32)", "82 - 86 cm", "108 cm", "106 cm", "33 cm"],
-      ["L (34)", "86 - 90 cm", "112 cm", "108 cm", "34 cm"],
-      ["XL (36)", "90 - 96 cm", "116 cm", "110 cm", "35 cm"]
+      ["S (30)", "78 - 81 cm", "102 cm", "104 cm", "30 cm"],
+      ["M (32)", "82 - 85 cm", "106 cm", "106 cm", "31 cm"],
+      ["L (34)", "86 - 90 cm", "110 cm", "108 cm", "32 cm"],
+      ["XL (36)", "91 - 96 cm", "115 cm", "110 cm", "33 cm"]
+    ]
+  },
+  "jeans-mujer": {
+    name: "Jeans Mujer (High Waist & Mom Fit)",
+    headers: ["Talla (US)", "Cintura (cm)", "Cadera (cm)", "Largo Total (cm)", "Tiro (cm)"],
+    rows: [
+      ["S (26-28)", "64 - 68 cm", "92 - 96 cm", "102 cm", "31 cm"],
+      ["M (28-30)", "69 - 73 cm", "97 - 101 cm", "104 cm", "32 cm"],
+      ["L (30-32)", "74 - 78 cm", "102 - 106 cm", "106 cm", "33 cm"],
+      ["XL (32-34)", "79 - 84 cm", "107 - 112 cm", "107 cm", "34 cm"]
     ]
   }
 };
@@ -161,11 +205,11 @@ let appState = {
 
 // Initialize LocalStorage Data
 function initStore() {
-  const version = localStorage.getItem("cic_v2_synced");
+  const version = localStorage.getItem("cic_moda_catalog_v3");
   if (!version) {
     appState.products = DEFAULT_PRODUCTS;
     saveProducts();
-    localStorage.setItem("cic_v2_synced", "true");
+    localStorage.setItem("cic_moda_catalog_v3", "true");
   } else {
     const savedProducts = localStorage.getItem("cic_products");
     appState.products = savedProducts ? JSON.parse(savedProducts) : DEFAULT_PRODUCTS;
@@ -178,17 +222,17 @@ function initStore() {
   if (savedOrders) {
     appState.orders = JSON.parse(savedOrders);
   } else {
-    // Initial benchmark demo orders
+    // Initial benchmark demo orders for Admin backoffice
     appState.orders = [
       {
         id: "CC-PE-88491",
         date: "2026-10-01",
         customer: "Mateo Silva",
         country: "Perú (Arequipa)",
-        items: [{ title: "Hoodie Heavyweight 450 GSM Anthracite", size: "L", qty: 1, price: 179 }],
+        items: [{ title: "Jeans Straight Raw Indigo 14 oz", size: "L", qty: 1, price: 179 }],
         total: 197.00,
-        costTotal: 78.00,
-        margin: 119.00,
+        costTotal: 76.00,
+        margin: 121.00,
         status: "En tránsito Serpost",
         trackingCode: "SERPOST-PE-7892144"
       },
@@ -197,10 +241,10 @@ function initStore() {
         date: "2026-10-02",
         customer: "Carla Mendoza",
         country: "Ecuador (Quito)",
-        items: [{ title: "Polo Pima Oversize Noir Raw", size: "M", qty: 2, price: 89 }],
-        total: 223.00,
-        costTotal: 76.00,
-        margin: 147.00,
+        items: [{ title: "Polo Pima Baby Tee Off-White", size: "M", qty: 2, price: 79 }],
+        total: 203.00,
+        costTotal: 64.00,
+        margin: 139.00,
         status: "Despacho Aéreo Internacional",
         trackingCode: "SERPOST-INT-EC44019"
       }
@@ -225,304 +269,206 @@ function saveCart() {
 
 function saveOrders() {
   localStorage.setItem("cic_orders", JSON.stringify(appState.orders));
-  renderAdminPanel();
 }
 
-// Formatting helpers
-function formatPrice(amountPEN) {
-  const currency = appState.currency;
-  const rate = appState.exchangeRates[currency] || 1;
-  const converted = amountPEN * rate;
+// Currency Conversion & Formatting (Clean Proportional Numbers)
+function formatPrice(amountInPEN) {
+  const rate = appState.exchangeRates[appState.currency] || 1;
+  const converted = amountInPEN * rate;
 
-  if (currency === "USD") {
+  if (appState.currency === "PEN") {
+    return `S/ ${converted.toFixed(2)}`;
+  } else if (appState.currency === "USD") {
     return `$ ${converted.toFixed(2)} USD`;
-  } else if (currency === "CLP") {
-    return `$ ${Math.round(converted).toLocaleString()} CLP`;
+  } else if (appState.currency === "CLP") {
+    return `$ ${Math.round(converted).toLocaleString("es-CL")} CLP`;
   }
-  return `S/ ${converted.toFixed(2)}`;
+  return `S/ ${amountInPEN.toFixed(2)}`;
 }
 
-// Render Products Catalog
+// Render Products Grid
 function renderProducts() {
   const container = document.getElementById("products-container");
   if (!container) return;
 
-  const filtered = appState.activeCategory === "all" 
-    ? appState.products 
+  const filtered = appState.activeCategory === "all"
+    ? appState.products
     : appState.products.filter(p => p.category === appState.activeCategory);
 
-  container.innerHTML = filtered.map(product => {
-    const totalStock = Object.values(product.stock).reduce((a, b) => a + b, 0);
-    const stockClass = totalStock > 10 ? "badge-in-stock" : (totalStock > 0 ? "badge-low-stock" : "badge-out-of-stock");
-    const stockText = totalStock > 10 ? `${totalStock} disponibles` : (totalStock > 0 ? `¡Últimas ${totalStock} unid!` : "Agotado");
+  container.innerHTML = filtered.map(p => {
+    const totalStock = Object.values(p.stock).reduce((a, b) => a + b, 0);
+    const isOutOfStock = totalStock === 0;
+    const isLowStock = totalStock > 0 && totalStock <= 15;
 
-    const sizePills = Object.entries(product.stock).map(([size, count]) => `
-      <span class="size-chip ${count === 0 ? 'disabled' : ''}" title="${count} en stock">${size}</span>
-    `).join("");
+    let stockBadge = "";
+    if (isOutOfStock) {
+      stockBadge = `<span class="product-badge badge-out-of-stock">Agotado</span>`;
+    } else if (isLowStock) {
+      stockBadge = `<span class="product-badge badge-low-stock">Últimas ${totalStock} unid.</span>`;
+    } else {
+      stockBadge = `<span class="product-badge badge-in-stock">En Stock</span>`;
+    }
+
+    const sizesHtml = ["S", "M", "L", "XL"].map(sz => {
+      const available = p.stock[sz] > 0;
+      return `
+        <button 
+          class="size-chip ${!available ? 'disabled' : ''}" 
+          data-size="${sz}"
+          ${!available ? 'disabled' : ''}
+          onclick="event.stopPropagation(); selectProductSize('${p.id}', '${sz}', this)"
+          title="${available ? `Talla ${sz} (${p.stock[sz]} disp.)` : 'Agotado'}">
+          ${sz}
+        </button>
+      `;
+    }).join("");
+
+    const categoryNames = {
+      "polos-hombre": "Polos Hombre • Algodón Pima",
+      "polos-mujer": "Polos Mujer • Algodón Pima",
+      "jeans-hombre": "Jeans Hombre • Denim Peruano",
+      "jeans-mujer": "Jeans Mujer • Denim Peruano"
+    };
 
     return `
-      <div class="product-card" data-category="${product.category}">
-        <div class="product-media">
-          <img src="${product.imgFront}" alt="${product.title}" class="product-img" 
-               onmouseover="this.src='${product.imgBack}'" 
-               onmouseout="this.src='${product.imgFront}'" loading="lazy">
-          <span class="product-badge-origin">🇵🇪 ${product.origin}</span>
-          <span class="product-badge-stock ${stockClass}">${stockText}</span>
+      <article class="product-card" id="card-${p.id}">
+        <div class="product-media" onclick="openProductQuickView('${p.id}')">
+          <img src="${p.imgFront}" alt="${p.title}" class="product-img" loading="lazy">
+          <div class="product-origin-chip">🇵🇪 Confección Peruana</div>
+          ${stockBadge}
         </div>
+
         <div class="product-body">
           <div>
-            <div class="product-category-meta">${product.category} • Algodón Pima Peruano</div>
-            <h3 class="product-title">${product.title}</h3>
-            <p class="product-fabric-spec">${product.fabric}</p>
+            <div class="product-category-meta">${categoryNames[p.category] || p.category}</div>
+            <h3 class="product-title" onclick="openProductQuickView('${p.id}')">${p.title}</h3>
+            <p class="product-fabric-spec">${p.fabric}</p>
           </div>
+
           <div>
             <div class="product-pricing-row">
-              <span class="price-main">${formatPrice(product.price)}</span>
-              <div class="size-chips-preview">${sizePills}</div>
+              <span class="price-main">${formatPrice(p.price)}</span>
+              <div class="size-chips-preview" id="sizes-${p.id}">
+                ${sizesHtml}
+              </div>
             </div>
+
             <div class="product-card-actions">
-              <button class="btn-card-add" onclick="openProductQuickSelect('${product.id}')">
-                Seleccionar Talla & Comprar
+              <button 
+                class="btn-card-add" 
+                id="btn-add-${p.id}"
+                ${isOutOfStock ? 'disabled' : ''}
+                onclick="handleCardAddClick('${p.id}')">
+                ${isOutOfStock ? 'Agotado' : 'Seleccionar Talla'}
               </button>
-              <button class="btn-card-guide" onclick="openSizeGuide('${product.category}', '${product.title}')" title="Ver medidas en cm">
+              <button 
+                class="btn-card-guide" 
+                onclick="openSizeGuide('${p.category}', '${p.title}')" 
+                title="Ver Tabla de Medidas Exactas">
                 📏 Medidas
               </button>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     `;
   }).join("");
 }
 
-// Quick Select Modal
-function openProductQuickSelect(productId) {
+// Temporary selected sizes per card
+const selectedSizes = {};
+
+function selectProductSize(productId, size, btnEl) {
+  selectedSizes[productId] = size;
+  const card = document.getElementById(`card-${productId}`);
+  if (!card) return;
+
+  card.querySelectorAll(".size-chip").forEach(c => c.classList.remove("active"));
+  btnEl.classList.add("active");
+
+  const addBtn = document.getElementById(`btn-add-${productId}`);
+  if (addBtn) {
+    addBtn.innerHTML = `Agregar Talla <strong>${size}</strong> a la Bolsa 🛒`;
+    addBtn.style.background = "var(--accent-black)";
+  }
+}
+
+function handleCardAddClick(productId) {
+  const selectedSize = selectedSizes[productId];
+  if (!selectedSize) {
+    showToast("📏 Por favor selecciona una talla (S, M, L o XL).");
+    const container = document.getElementById(`sizes-${productId}`);
+    if (container) {
+      container.style.animation = "shake 0.4s ease";
+      setTimeout(() => container.style.animation = "", 400);
+    }
+    return;
+  }
+
+  addToCart(productId, selectedSize);
+}
+
+// Cart Logic
+function addToCart(productId, size, quantity = 1) {
   const product = appState.products.find(p => p.id === productId);
   if (!product) return;
 
-  const modal = document.getElementById("product-modal");
-  const modalBody = document.getElementById("modal-body-content");
+  const currentStock = product.stock[size] || 0;
+  const existingInCart = appState.cart.find(item => item.id === productId && item.size === size);
+  const currentInCartQty = existingInCart ? existingInCart.qty : 0;
 
-  const sizeOptions = Object.entries(product.stock).map(([size, count]) => `
-    <button class="btn-size-selector ${count === 0 ? 'disabled' : ''}" 
-            onclick="selectSizeInModal('${size}', ${count})" 
-            data-size="${size}" ${count === 0 ? 'disabled' : ''}
-            style="padding: 12px 18px; border: 1.5px solid #d1d5db; background: ${count === 0 ? '#f3f4f6' : '#fff'}; border-radius: 8px; font-weight: 700; cursor: ${count === 0 ? 'not-allowed' : 'pointer'};">
-      Talla ${size} <span style="font-size:0.75rem; color:${count === 0 ? '#ef4444' : '#10b981'}; font-weight:600;">(${count > 0 ? count + ' disp.' : 'Agotado'})</span>
-    </button>
-  `).join("");
-
-  modalBody.innerHTML = `
-    <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; align-items: start;">
-      <img src="${product.imgFront}" alt="${product.title}" style="width: 100%; border-radius: 12px; object-fit: cover; aspect-ratio: 4/5;">
-      <div>
-        <span style="font-family: var(--font-tech); font-size: 0.78rem; color: var(--accent-peru); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
-          🇵🇪 ${product.origin}
-        </span>
-        <h2 style="font-size: 1.6rem; font-weight: 800; margin: 6px 0 10px;">${product.title}</h2>
-        <p style="font-size: 1.4rem; font-family: var(--font-display); font-weight: 800; margin-bottom: 14px;">${formatPrice(product.price)}</p>
-        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.6;">${product.fabric}</p>
-        
-        <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; text-transform: uppercase;">
-          1. Elige tu Talla:
-        </label>
-        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
-          ${sizeOptions}
-        </div>
-
-        <input type="hidden" id="selected-size-val" value="">
-
-        <div style="display: flex; gap: 12px; align-items: center; margin-top: 1.5rem;">
-          <button class="btn-primary" style="flex-grow: 1; justify-content: center; padding: 16px;" onclick="confirmAddToCart('${product.id}')">
-            🛒 Agregar al Carrito
-          </button>
-          <button class="btn-secondary" onclick="openSizeGuide('${product.category}', '${product.title}')" style="padding: 16px 20px;">
-            📏 Tabla de Medidas
-          </button>
-        </div>
-      </div>
-    </div>
-  `;
-
-  modal.classList.add("active");
-}
-
-function selectSizeInModal(size, count) {
-  if (count === 0) return;
-  document.querySelectorAll(".btn-size-selector").forEach(b => {
-    b.style.borderColor = "#d1d5db";
-    b.style.background = "#fff";
-    b.style.color = "#000";
-  });
-
-  const selectedBtn = document.querySelector(`.btn-size-selector[data-size="${size}"]`);
-  if (selectedBtn) {
-    selectedBtn.style.borderColor = "#000";
-    selectedBtn.style.background = "#0c0d0f";
-    selectedBtn.style.color = "#fff";
-  }
-
-  document.getElementById("selected-size-val").value = size;
-}
-
-function confirmAddToCart(productId) {
-  const size = document.getElementById("selected-size-val").value;
-  if (!size) {
-    showToast("⚠️ Por favor selecciona una talla antes de agregar al carrito.");
+  if (currentInCartQty + quantity > currentStock) {
+    showToast(`⚠️ Stock insuficiente. Solo quedan ${currentStock} unidades en talla ${size}.`);
     return;
   }
 
-  const product = appState.products.find(p => p.id === productId);
-  if (!product || product.stock[size] <= 0) {
-    showToast("⚠️ Lo sentimos, esta talla se encuentra agotada.");
-    return;
-  }
-
-  // Check if already in cart
-  const existingIndex = appState.cart.findIndex(i => i.id === productId && i.size === size);
-  if (existingIndex > -1) {
-    if (appState.cart[existingIndex].qty < product.stock[size]) {
-      appState.cart[existingIndex].qty += 1;
-    } else {
-      showToast(`⚠️ Has alcanzado el límite de stock disponible (${product.stock[size]} unid).`);
-      return;
-    }
+  if (existingInCart) {
+    existingInCart.qty += quantity;
   } else {
     appState.cart.push({
       id: product.id,
       title: product.title,
       price: product.price,
       cost: product.cost,
+      category: product.category,
       size: size,
-      img: product.imgFront,
-      qty: 1
+      qty: quantity,
+      img: product.imgFront
     });
   }
 
   saveCart();
-  closeModal();
+  showToast(`✅ "${product.title}" (${size}) agregado a tu bolsa.`);
   openCartDrawer();
-  showToast(`✅ "${product.title}" (Talla ${size}) agregado al carrito.`);
 }
 
-// Size Guide Modal
-function openSizeGuide(category, productTitle) {
-  const chart = SIZE_CHARTS[category] || SIZE_CHARTS.polos;
-  const modal = document.getElementById("product-modal");
-  const modalBody = document.getElementById("modal-body-content");
-
-  modalBody.innerHTML = `
-    <div>
-      <span style="font-family: var(--font-tech); font-size: 0.8rem; color: var(--accent-peru); font-weight: 700; text-transform: uppercase;">
-        Guía Oficial de Patronaje Textil C&C
-      </span>
-      <h2 style="font-size: 1.6rem; font-weight: 800; margin: 4px 0 10px;">Tabla de Medidas Exactas (${category.toUpperCase()})</h2>
-      <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
-        Nuestras prendas de algodón peruano están diseñadas con patronaje regular/oversize pre-encogido al calor. Toma las medidas de tu prenda favorita sobre una superficie plana para elegir con certeza:
-      </p>
-
-      <table class="size-table">
-        <thead>
-          <tr>
-            ${chart.headers.map(h => `<th>${h}</th>`).join("")}
-          </tr>
-        </thead>
-        <tbody>
-          ${chart.rows.map(r => `
-            <tr>
-              ${r.map((cell, idx) => `<td style="${idx === 0 ? 'font-weight:800;' : ''}">${cell}</td>`).join("")}
-            </tr>
-          `).join("")}
-        </tbody>
-      </table>
-
-      <div style="background: var(--canvas-alt); border-radius: 8px; padding: 14px; margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-        <strong>💡 Consejo de ajuste C&C:</strong> Si buscas un fit clásico y entallado, elige tu talla habitual. Si deseas la caída holgada contemporánea (Drop-shoulder / Boxy fit), sube una talla.
-      </div>
-    </div>
-  `;
-
-  modal.classList.add("active");
-}
-
-function closeModal() {
-  document.getElementById("product-modal").classList.remove("active");
-}
-
-// Cart Drawer Mechanics
-function openCartDrawer() {
-  renderCartDrawer();
-  document.getElementById("cart-drawer").classList.add("active");
-  document.getElementById("cart-backdrop").classList.add("active");
-}
-
-function closeCartDrawer() {
-  document.getElementById("cart-drawer").classList.remove("active");
-  document.getElementById("cart-backdrop").classList.remove("active");
-}
-
-function renderCartDrawer() {
-  const container = document.getElementById("cart-items-container");
-  const subtotalEl = document.getElementById("cart-subtotal");
-  const shippingEl = document.getElementById("cart-shipping-cost");
-  const totalEl = document.getElementById("cart-total");
-
-  if (appState.cart.length === 0) {
-    container.innerHTML = `
-      <div style="text-align: center; padding: 4rem 1rem; color: var(--text-tertiary);">
-        <p style="font-size: 2.5rem; margin-bottom: 10px;">🛍️</p>
-        <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 6px;">Tu carrito está vacío</h4>
-        <p style="font-size: 0.85rem;">Explora nuestros polos Pima, poleras heavyweight y pantalones con envíos Serpost.</p>
-      </div>
-    `;
-    subtotalEl.innerText = formatPrice(0);
-    shippingEl.innerText = formatPrice(0);
-    totalEl.innerText = formatPrice(0);
-    return;
+function updateCartBadge() {
+  const badge = document.getElementById("cart-badge");
+  const count = appState.cart.reduce((sum, item) => sum + item.qty, 0);
+  if (badge) {
+    badge.innerText = count;
+    badge.style.display = count > 0 ? "flex" : "none";
   }
-
-  container.innerHTML = appState.cart.map((item, idx) => `
-    <div class="cart-item-card">
-      <img src="${item.img}" alt="${item.title}" class="cart-item-thumb">
-      <div class="cart-item-info">
-        <h4>${item.title}</h4>
-        <div class="cart-item-meta">Talla: <strong>${item.size}</strong> • 100% Algodón Peruano</div>
-        <div class="cart-qty-ctrls">
-          <button class="cart-qty-btn" onclick="updateItemQty(${idx}, -1)">-</button>
-          <span style="font-weight: 700; font-size: 0.9rem;">${item.qty}</span>
-          <button class="cart-qty-btn" onclick="updateItemQty(${idx}, 1)">+</button>
-          <button onclick="removeCartItem(${idx})" style="background:none; border:none; color:#ef4444; font-size:0.75rem; margin-left:8px; cursor:pointer; text-decoration:underline;">Eliminar</button>
-        </div>
-      </div>
-      <div class="cart-item-price">${formatPrice(item.price * item.qty)}</div>
-    </div>
-  `).join("");
-
-  const subtotal = appState.cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-  const rate = SHIPPING_RATES[appState.selectedShipping] || SHIPPING_RATES.lima;
-  const total = subtotal + rate.cost;
-
-  subtotalEl.innerText = formatPrice(subtotal);
-  shippingEl.innerText = formatPrice(rate.cost);
-  totalEl.innerText = formatPrice(total);
 }
 
-function updateItemQty(index, delta) {
+function changeCartItemQty(index, delta) {
   const item = appState.cart[index];
-  const product = appState.products.find(p => p.id === item.id);
-  const maxStock = product ? product.stock[item.size] : 99;
+  if (!item) return;
 
-  const newQty = item.qty + delta;
-  if (newQty <= 0) {
-    removeCartItem(index);
-    return;
-  }
-  if (newQty > maxStock) {
-    showToast(`⚠️ Solo quedan ${maxStock} unidades disponibles en talla ${item.size}.`);
-    return;
+  const prod = appState.products.find(p => p.id === item.id);
+  const stockLimit = prod ? prod.stock[item.size] : 99;
+
+  item.qty += delta;
+
+  if (item.qty > stockLimit) {
+    item.qty = stockLimit;
+    showToast(`⚠️ Máximo de stock disponible alcanzado (${stockLimit} unid).`);
   }
 
-  item.qty = newQty;
+  if (item.qty <= 0) {
+    appState.cart.splice(index, 1);
+  }
+
   saveCart();
   renderCartDrawer();
 }
@@ -533,65 +479,272 @@ function removeCartItem(index) {
   renderCartDrawer();
 }
 
-function updateCartBadge() {
-  const badge = document.getElementById("cart-badge");
-  const count = appState.cart.reduce((sum, i) => sum + i.qty, 0);
-  if (badge) badge.innerText = count;
+// Modals: QuickView & Size Guide
+function openProductQuickView(productId) {
+  const p = appState.products.find(item => item.id === productId);
+  if (!p) return;
+
+  const modal = document.getElementById("product-modal");
+  const modalBody = document.getElementById("modal-body-content");
+
+  const totalStock = Object.values(p.stock).reduce((a, b) => a + b, 0);
+
+  modalBody.innerHTML = `
+    <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap: 2rem;">
+      <div>
+        <img src="${p.imgFront}" alt="${p.title}" style="width:100%; border-radius:12px; object-fit:cover; aspect-ratio:3/4;">
+      </div>
+      <div style="display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <span style="font-size:0.8rem; font-weight:700; color:var(--text-tertiary); text-transform:uppercase;">
+            ${p.origin}
+          </span>
+          <h2 style="font-size:1.8rem; font-weight:800; margin:6px 0 10px;">${p.title}</h2>
+          <div style="font-size:1.5rem; font-weight:800; color:var(--text-primary); margin-bottom:1rem;">
+            ${formatPrice(p.price)}
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.2rem;">
+            ${p.fabric}
+          </p>
+
+          <label style="display:block; font-size:0.85rem; font-weight:700; text-transform:uppercase; margin-bottom:8px;">
+            Selecciona tu Talla:
+          </label>
+          <div style="display:flex; gap:8px; margin-bottom:1.5rem;">
+            ${["S", "M", "L", "XL"].map(sz => {
+              const count = p.stock[sz];
+              return `
+                <button 
+                  class="size-chip" 
+                  style="width:44px; height:44px; font-size:0.9rem;"
+                  ${count === 0 ? 'disabled' : ''}
+                  onclick="selectModalSize('${sz}', this)">
+                  ${sz}
+                </button>
+              `;
+            }).join("")}
+          </div>
+        </div>
+
+        <div>
+          <button class="btn-checkout-now" onclick="addModalItemToCart('${p.id}')">
+            Agregar a la Bolsa
+          </button>
+          <button class="btn-card-guide" style="width:100%; margin-top:8px; padding:12px;" onclick="openSizeGuide('${p.category}', '${p.title}')">
+            📏 Consultar Tabla de Medidas en cm
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  modal.classList.add("active");
 }
 
-function onShippingOptionChange(val) {
-  appState.selectedShipping = val;
+let modalSelectedSize = null;
+function selectModalSize(size, el) {
+  modalSelectedSize = size;
+  document.querySelectorAll("#modal-body-content .size-chip").forEach(c => c.classList.remove("active"));
+  el.classList.add("active");
+}
+
+function addModalItemToCart(productId) {
+  if (!modalSelectedSize) {
+    showToast("📏 Selecciona una talla antes de agregar a la bolsa.");
+    return;
+  }
+  addToCart(productId, modalSelectedSize);
+  closeModal();
+}
+
+function openSizeGuide(categoryKey, productTitle) {
+  const chart = SIZE_CHARTS[categoryKey] || SIZE_CHARTS["polos-hombre"];
+  const modal = document.getElementById("product-modal");
+  const modalBody = document.getElementById("modal-body-content");
+
+  modalBody.innerHTML = `
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:1rem;">
+        <div>
+          <span style="font-size:0.75rem; font-weight:700; color:var(--text-tertiary); text-transform:uppercase;">
+            Guía Oficial de Patronaje Textil Peruano
+          </span>
+          <h2 style="font-size:1.6rem; font-weight:800; margin-top:4px;">
+            Tabla de Medidas (${chart.name})
+          </h2>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:8px; margin: 1.2rem 0; flex-wrap:wrap;">
+        <button class="filter-pill ${categoryKey === 'polos-hombre' ? 'active' : ''}" onclick="openSizeGuide('polos-hombre', '${productTitle}')">Polos Hombre</button>
+        <button class="filter-pill ${categoryKey === 'polos-mujer' ? 'active' : ''}" onclick="openSizeGuide('polos-mujer', '${productTitle}')">Polos Mujer</button>
+        <button class="filter-pill ${categoryKey === 'jeans-hombre' ? 'active' : ''}" onclick="openSizeGuide('jeans-hombre', '${productTitle}')">Jeans Hombre</button>
+        <button class="filter-pill ${categoryKey === 'jeans-mujer' ? 'active' : ''}" onclick="openSizeGuide('jeans-mujer', '${productTitle}')">Jeans Mujer</button>
+      </div>
+
+      <table class="size-table">
+        <thead>
+          <tr>
+            ${chart.headers.map(h => `<th>${h}</th>`).join("")}
+          </tr>
+        </thead>
+        <tbody>
+          ${chart.rows.map(r => `
+            <tr>
+              ${r.map((cell, idx) => `<td style="${idx === 0 ? 'font-weight:700;' : ''}">${cell}</td>`).join("")}
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+
+      <div style="background: var(--canvas-alt); border-radius: 8px; padding: 14px; margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+        <strong>💡 Consejo de ajuste CIC Moda:</strong> Todas las medidas están expresadas en centímetros sobre prenda plana. Para polos oversize, recomendamos elegir tu talla habitual; para jeans denim rígido, recomendamos medir tu cintura y contrastar con la tabla.
+      </div>
+    </div>
+  `;
+
+  modal.classList.add("active");
+}
+
+function closeModal() {
+  const modal = document.getElementById("product-modal");
+  if (modal) modal.classList.remove("active");
+}
+
+// Cart Drawer Mechanics
+function openCartDrawer() {
+  renderCartDrawer();
+  const drawer = document.getElementById("cart-drawer");
+  const backdrop = document.getElementById("cart-backdrop");
+  if (drawer) drawer.classList.add("active");
+  if (backdrop) backdrop.classList.add("active");
+}
+
+function closeCartDrawer() {
+  const drawer = document.getElementById("cart-drawer");
+  const backdrop = document.getElementById("cart-backdrop");
+  if (drawer) drawer.classList.remove("active");
+  if (backdrop) backdrop.classList.remove("active");
+}
+
+function renderCartDrawer() {
+  const container = document.getElementById("cart-items-container");
+  const subtotalEl = document.getElementById("cart-subtotal");
+  const shippingEl = document.getElementById("cart-shipping-cost");
+  const totalEl = document.getElementById("cart-total");
+
+  if (!container) return;
+
+  if (appState.cart.length === 0) {
+    container.innerHTML = `
+      <div style="text-align: center; padding: 4rem 1rem; color: var(--text-tertiary);">
+        <p style="font-size: 2.5rem; margin-bottom: 10px;">🛍️</p>
+        <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 6px;">Tu bolsa está vacía</h4>
+        <p style="font-size: 0.85rem;">Explora nuestros polos Pima y jeans denim con envíos nacionales e internacionales.</p>
+      </div>
+    `;
+    if (subtotalEl) subtotalEl.innerText = formatPrice(0);
+    if (shippingEl) shippingEl.innerText = formatPrice(0);
+    if (totalEl) totalEl.innerText = formatPrice(0);
+    return;
+  }
+
+  const subtotal = appState.cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+  const shippingCost = SHIPPING_RATES[appState.selectedShipping].cost;
+  const total = subtotal + shippingCost;
+
+  container.innerHTML = appState.cart.map((item, idx) => `
+    <div class="cart-item">
+      <img src="${item.img}" alt="${item.title}" class="cart-item-img">
+      <div class="cart-item-details">
+        <div class="cart-item-title">${item.title}</div>
+        <div class="cart-item-meta">Talla: <strong>${item.size}</strong> • Confección Peruana</div>
+        <div class="cart-item-meta" style="color:var(--text-primary); font-weight:700;">${formatPrice(item.price)}</div>
+        <div class="cart-item-controls">
+          <div class="qty-control">
+            <button class="qty-btn" onclick="changeCartItemQty(${idx}, -1)">−</button>
+            <span class="qty-val">${item.qty}</span>
+            <button class="qty-btn" onclick="changeCartItemQty(${idx}, 1)">+</button>
+          </div>
+          <button class="cart-remove-btn" onclick="removeCartItem(${idx})">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+  if (subtotalEl) subtotalEl.innerText = formatPrice(subtotal);
+  if (shippingEl) shippingEl.innerText = formatPrice(shippingCost);
+  if (totalEl) totalEl.innerText = formatPrice(total);
+}
+
+function onShippingOptionChange(newOptionKey) {
+  appState.selectedShipping = newOptionKey;
   renderCartDrawer();
 }
 
-// Checkout Process (Pasarela Automatizada)
+// Checkout & Payment Simulation
 function proceedToCheckout() {
   if (appState.cart.length === 0) {
-    showToast("⚠️ Tu carrito está vacío.");
+    showToast("🛍️ Tu bolsa está vacía. Selecciona una prenda para comprar.");
     return;
   }
 
   closeCartDrawer();
+
+  const subtotal = appState.cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+  const shippingCost = SHIPPING_RATES[appState.selectedShipping].cost;
+  const total = subtotal + shippingCost;
+
   const modal = document.getElementById("product-modal");
   const modalBody = document.getElementById("modal-body-content");
 
-  const subtotal = appState.cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-  const rate = SHIPPING_RATES[appState.selectedShipping] || SHIPPING_RATES.lima;
-  const total = subtotal + rate.cost;
-
   modalBody.innerHTML = `
     <div>
-      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e5e7eb; padding-bottom:12px; margin-bottom:1.5rem;">
-        <div>
-          <h2 style="font-size:1.5rem; font-weight:800; text-transform:uppercase;">Pasarela de Pago Segura C&amp;C</h2>
-          <p style="font-size:0.85rem; color:var(--text-secondary);">Envíos con seguimiento certificado vía Serpost</p>
+      <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+        <span style="font-size:0.75rem; font-weight:700; color:var(--badge-in-stock); text-transform:uppercase;">
+          🔒 Pasarela de Pago Segura • Conexión Cifrada SSL
+        </span>
+        <h2 style="font-size: 1.7rem; font-weight: 800; margin-top: 4px;">
+          Finalizar Pedido — CIC Moda
+        </h2>
+      </div>
+
+      <div style="background:var(--canvas-alt); border-radius:10px; padding:16px; margin-bottom:1.5rem;">
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:6px;">
+          <span>Subtotal (${appState.cart.reduce((a,b)=>a+b.qty, 0)} prendas):</span>
+          <strong>${formatPrice(subtotal)}</strong>
         </div>
-        <div style="text-align:right;">
-          <span style="font-size:0.75rem; color:var(--text-tertiary); text-transform:uppercase; font-weight:700;">Total a Pagar:</span>
-          <div style="font-size:1.6rem; font-family:var(--font-display); font-weight:800; color:var(--accent-peru);">${formatPrice(total)}</div>
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:6px;">
+          <span>Envío (${SHIPPING_RATES[appState.selectedShipping].carrier}):</span>
+          <strong>${formatPrice(shippingCost)}</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:1.15rem; font-weight:800; border-top:1px solid #d1d5db; padding-top:8px; margin-top:8px;">
+          <span>Total a Pagar:</span>
+          <span>${formatPrice(total)}</span>
         </div>
       </div>
 
-      <form id="checkout-form" onsubmit="processPayment(event, ${total})">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-bottom:1.2rem;">
+      <form onsubmit="processPayment(event, ${total})">
+        <h4 style="font-size:0.95rem; font-weight:700; text-transform:uppercase; margin-bottom:12px;">Datos de Envío:</h4>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
           <div>
-            <label style="display:block; font-size:0.8rem; font-weight:700; margin-bottom:4px;">Nombre y Apellidos</label>
-            <input type="text" required class="tracking-input" style="width:100%; padding:10px;" placeholder="Ej. Sebastián Morales">
+            <label style="display:block; font-size:0.8rem; font-weight:700; margin-bottom:4px;">Nombres y Apellidos</label>
+            <input type="text" required class="tracking-input" style="width:100%; padding:10px;" placeholder="Ej: Mateo Silva">
           </div>
           <div>
-            <label style="display:block; font-size:0.8rem; font-weight:700; margin-bottom:4px;">Correo Electrónico</label>
-            <input type="email" required class="tracking-input" style="width:100%; padding:10px;" placeholder="tu-email@gmail.com">
+            <label style="display:block; font-size:0.8rem; font-weight:700; margin-bottom:4px;">Teléfono / WhatsApp</label>
+            <input type="tel" required class="tracking-input" style="width:100%; padding:10px;" placeholder="+51 987 654 321">
           </div>
         </div>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-bottom:1.2rem;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:1.5rem;">
           <div>
-            <label style="display:block; font-size:0.8rem; font-weight:700; margin-bottom:4px;">País / Destino de Entrega</label>
+            <label style="display:block; font-size:0.8rem; font-weight:700; margin-bottom:4px;">País / Destino</label>
             <select class="tracking-input" style="width:100%; padding:10px;" onchange="onShippingOptionChange(this.value); proceedToCheckout();">
               <option value="lima" ${appState.selectedShipping === 'lima' ? 'selected' : ''}>🇵🇪 Perú - Lima Metropolitana (S/ 10)</option>
               <option value="provincias" ${appState.selectedShipping === 'provincias' ? 'selected' : ''}>🇵🇪 Perú - Provincias (S/ 18)</option>
-              <option value="ecuador" ${appState.selectedShipping === 'ecuador' ? 'selected' : ''}>🇪🇨 Ecuador - Serpost Internacional (S/ 45 - $12 USD)</option>
-              <option value="chile" ${appState.selectedShipping === 'chile' ? 'selected' : ''}>🇨🇱 Chile - Serpost Internacional (S/ 55 - $15 USD)</option>
+              <option value="ecuador" ${appState.selectedShipping === 'ecuador' ? 'selected' : ''}>🇪🇨 Ecuador - Postal Internacional (S/ 45)</option>
+              <option value="chile" ${appState.selectedShipping === 'chile' ? 'selected' : ''}>🇨🇱 Chile - Postal Internacional (S/ 55)</option>
             </select>
           </div>
           <div>
@@ -600,7 +753,7 @@ function proceedToCheckout() {
           </div>
         </div>
 
-        <label style="display:block; font-size:0.85rem; font-weight:800; text-transform:uppercase; margin:1.5rem 0 8px;">
+        <label style="display:block; font-size:0.85rem; font-weight:700; text-transform:uppercase; margin:1.5rem 0 8px;">
           Selecciona tu Método de Pago:
         </label>
         
@@ -641,7 +794,7 @@ function proceedToCheckout() {
         </div>
 
         <button type="submit" class="btn-checkout-now" style="font-size:1.05rem;">
-          🔒 Confirmar Pago de ${formatPrice(total)} y Generar Envío Serpost
+          🔒 Confirmar Pago de ${formatPrice(total)}
         </button>
       </form>
     </div>
@@ -666,10 +819,10 @@ function processPayment(e, totalAmount) {
   const totalCost = appState.cart.reduce((sum, item) => sum + (item.cost * item.qty), 0);
   const netMargin = totalAmount - totalCost;
 
-  // 3. Create Serpost Order
+  // 3. Create Order
   const randomNum = Math.floor(10000 + Math.random() * 90000);
   const countryPrefix = appState.selectedShipping === "ecuador" ? "EC" : (appState.selectedShipping === "chile" ? "CL" : "PE");
-  const orderId = `CC-${countryPrefix}-${randomNum}`;
+  const orderId = `CIC-${countryPrefix}-${randomNum}`;
   const trackingNumber = `SERPOST-${countryPrefix}-${Date.now().toString().slice(-6)}`;
 
   const newOrder = {
@@ -681,7 +834,7 @@ function processPayment(e, totalAmount) {
     total: totalAmount,
     costTotal: totalCost,
     margin: netMargin,
-    status: "Pagado - Asignado a Serpost",
+    status: "Pagado - En Preparación",
     trackingCode: trackingNumber
   };
 
@@ -698,82 +851,24 @@ function processPayment(e, totalAmount) {
   modalBody.innerHTML = `
     <div style="text-align:center; padding:2rem 1rem;">
       <div style="font-size:3.5rem; margin-bottom:12px;">🎉</div>
-      <span style="font-family:var(--font-tech); color:var(--badge-in-stock); font-weight:800; letter-spacing:0.1em; text-transform:uppercase;">
+      <span style="color:var(--badge-in-stock); font-weight:700; letter-spacing:0.06em; text-transform:uppercase;">
         ¡Pago Aprobado y Orden Confirmada!
       </span>
       <h2 style="font-size:1.8rem; font-weight:800; margin:8px 0 14px;">Pedido ${orderId}</h2>
       <p style="color:var(--text-secondary); max-width:500px; margin:0 auto 1.5rem; font-size:0.92rem; line-height:1.6;">
-        Tu pago ha sido procesado automáticamente. Tu paquete ha ingresado a la central de despacho para su rotulado y envío certificado por <strong>Serpost</strong>.
+        Tu pago ha sido procesado automáticamente. Tus prendas de confección peruana están siendo embaladas para su despacho oficial por <strong>Serpost</strong>.
       </p>
 
       <div style="background:var(--canvas-alt); border:1.5px dashed #000; border-radius:10px; padding:18px; max-width:440px; margin:0 auto 2rem; text-align:left;">
-        <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-secondary);">Código de Seguimiento Serpost:</div>
-        <div style="font-family:var(--font-tech); font-size:1.3rem; font-weight:800; color:var(--text-primary); margin:4px 0;">${trackingNumber}</div>
-        <div style="font-size:0.78rem; color:var(--badge-in-stock); font-weight:600;">Estado: Listo para recojo postal en Tomás Valle, Lima</div>
+        <div style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--text-secondary);">Código Postal Serpost Asignado:</div>
+        <div style="font-size:1.25rem; font-weight:800; color:var(--text-primary); margin:4px 0;">${trackingNumber}</div>
+        <div style="font-size:0.78rem; color:var(--badge-in-stock); font-weight:600;">Estado: En preparación para recojo postal en Lima</div>
       </div>
 
       <div style="display:flex; gap:12px; justify-content:center;">
-        <button class="btn-primary" onclick="closeModal(); checkSerpostTracking('${orderId}')">
-          📍 Ver Rastreo de Mi Envío
+        <button class="btn-primary" onclick="closeModal()">
+          Seguir Comprando 🛍️
         </button>
-        <button class="btn-secondary" onclick="closeModal()">
-          Volver a la Tienda
-        </button>
-      </div>
-    </div>
-  `;
-}
-
-// Serpost Tracking Search Function
-function checkSerpostTracking(orderIdInput) {
-  const input = orderIdInput || document.getElementById("tracking-query-input").value.trim();
-  if (!input) {
-    showToast("⚠️ Ingresa un número de pedido (ej: CC-PE-88491 o CC-EC-10924).");
-    return;
-  }
-
-  const order = appState.orders.find(o => o.id.toLowerCase() === input.toLowerCase() || (o.trackingCode && o.trackingCode.toLowerCase() === input.toLowerCase()));
-  const container = document.getElementById("tracking-result-box");
-
-  if (!order) {
-    container.innerHTML = `
-      <div style="background:#fee2e2; border:1px solid #ef4444; border-radius:8px; padding:16px; color:#991b1b; font-size:0.9rem;">
-        ❌ No encontramos un envío con el código <strong>${input}</strong>. Verifica el número en tu correo o prueba con los códigos de ejemplo: <code>CC-PE-88491</code> o <code>CC-EC-10924</code>.
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = `
-    <div style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:24px; box-shadow:var(--shadow-md);">
-      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e5e7eb; padding-bottom:14px; margin-bottom:16px;">
-        <div>
-          <span style="font-size:0.75rem; font-weight:700; color:var(--accent-peru); text-transform:uppercase;">Envío Postal Certificado</span>
-          <h3 style="font-size:1.3rem; font-weight:800;">${order.id}</h3>
-        </div>
-        <div style="text-align:right;">
-          <span class="stock-tag stock-ok">${order.status}</span>
-          <div style="font-family:var(--font-tech); font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">Guía: ${order.trackingCode}</div>
-        </div>
-      </div>
-
-      <div class="tracking-timeline">
-        <div class="timeline-step completed">
-          <h5 style="font-size:0.9rem; font-weight:700;">1. Pago Confirmado y Embalado C&amp;C Studio</h5>
-          <p style="font-size:0.78rem; color:var(--text-secondary);">Prendas de algodón peruano inspeccionadas y selladas en bolsa hermética.</p>
-        </div>
-        <div class="timeline-step completed">
-          <h5 style="font-size:0.9rem; font-weight:700;">2. Admitido en Centro de Clasificación Serpost</h5>
-          <p style="font-size:0.78rem; color:var(--text-secondary);">Tomás Valle (Callao, Lima) - Clasificación aduanera y peso certificado.</p>
-        </div>
-        <div class="timeline-step active">
-          <h5 style="font-size:0.9rem; font-weight:700;">3. ${order.status}</h5>
-          <p style="font-size:0.78rem; color:var(--badge-in-stock); font-weight:600;">Destino: ${order.country} • Código Postal asignado.</p>
-        </div>
-        <div class="timeline-step">
-          <h5 style="font-size:0.9rem; font-weight:700;">4. Entrega Final a Domicilio</h5>
-          <p style="font-size:0.78rem; color:var(--text-secondary);">Entrega con acuse de recibo y firma del destinatario.</p>
-        </div>
       </div>
     </div>
   `;
@@ -820,16 +915,16 @@ function renderAdminPanel() {
           <td><span style="color:#059669; font-weight:700;">+S/ ${marginItem} (${marginItemPct}%)</span></td>
           <td>
             <div style="display:flex; gap:6px;">
-              ${Object.entries(p.stock).map(([sz, qty]) => `
-                <span style="padding:2px 6px; background:#f3f4f6; border-radius:4px; font-size:0.75rem; ${qty < 5 ? 'color:#d97706; font-weight:bold;' : ''}">
-                  ${sz}: ${qty}
-                </span>
+              ${["S", "M", "L", "XL"].map(sz => `
+                <div style="text-align:center; background:var(--canvas-alt); padding:3px 6px; border-radius:4px; font-size:0.75rem;">
+                  <span style="font-weight:700;">${sz}:</span> ${p.stock[sz]}
+                </div>
               `).join("")}
             </div>
           </td>
           <td>
-            <button onclick="replenishStock('${p.id}')" style="background:#0c0d0f; color:#fff; border:none; padding:6px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; cursor:pointer;">
-              + Reponer +5
+            <button class="btn-card-guide" style="padding:6px 10px;" onclick="replenishProductStock('${p.id}')">
+              ➕ Reabastecer (+10)
             </button>
           </td>
         </tr>
@@ -837,7 +932,7 @@ function renderAdminPanel() {
     }).join("");
   }
 
-  // Render Orders Table
+  // Render Orders Queue
   const ordersTbody = document.getElementById("admin-orders-tbody");
   if (ordersTbody) {
     ordersTbody.innerHTML = appState.orders.map(o => `
@@ -846,12 +941,20 @@ function renderAdminPanel() {
         <td>${o.date}</td>
         <td>${o.customer}</td>
         <td>${o.country}</td>
+        <td>
+          <ul style="list-style:none; font-size:0.8rem; padding:0;">
+            ${o.items.map(it => `<li>${it.qty}x ${it.title} (${it.size})</li>`).join("")}
+          </ul>
+        </td>
         <td><strong>S/ ${o.total.toFixed(2)}</strong></td>
         <td><span style="color:#059669; font-weight:700;">+S/ ${o.margin.toFixed(2)}</span></td>
-        <td><span class="stock-tag stock-ok">${o.status}</span></td>
         <td>
-          <button onclick="updateOrderStatus('${o.id}')" style="background:#f3f4f6; border:1px solid #d1d5db; padding:4px 8px; border-radius:4px; font-size:0.72rem; cursor:pointer; font-weight:600;">
-            Avanzar Envío
+          <span class="stock-tag stock-ok">${o.status}</span>
+          <div style="font-size:0.72rem; color:var(--text-tertiary); margin-top:2px;">${o.trackingCode || '—'}</div>
+        </td>
+        <td>
+          <button class="btn-card-guide" style="font-size:0.75rem; padding:4px 8px;" onclick="cycleOrderStatus('${o.id}')">
+            Cambiar Estado
           </button>
         </td>
       </tr>
@@ -859,29 +962,28 @@ function renderAdminPanel() {
   }
 }
 
-function replenishStock(productId) {
+function replenishProductStock(productId) {
   const prod = appState.products.find(p => p.id === productId);
   if (!prod) return;
 
-  Object.keys(prod.stock).forEach(size => {
-    prod.stock[size] += 5;
+  ["S", "M", "L", "XL"].forEach(sz => {
+    prod.stock[sz] = (prod.stock[sz] || 0) + 10;
   });
 
   saveProducts();
   renderProducts();
   renderAdminPanel();
-  showToast(`✅ Se agregaron +5 unidades a todas las tallas de "${prod.title}".`);
+  showToast(`📦 Inventario de "${prod.title}" incrementado (+10 por talla).`);
 }
 
-function updateOrderStatus(orderId) {
+function cycleOrderStatus(orderId) {
   const order = appState.orders.find(o => o.id === orderId);
   if (!order) return;
 
   const states = [
     "Pagado - En preparación",
     "Admitido en Serpost Tomás Valle",
-    "Despacho Aéreo Internacional",
-    "En Aduana Destino",
+    "Despacho Postal en Tránsito",
     "Entregado al Cliente con Éxito"
   ];
 
@@ -894,20 +996,29 @@ function updateOrderStatus(orderId) {
   showToast(`🚚 Estado de orden ${orderId} actualizado a: "${order.status}".`);
 }
 
+// Secure Admin Access (Prompt for PIN or Toggle)
+function openAdminSecure() {
+  const pin = prompt("🔐 Acceso Administrador CIC Moda\nIngresa tu clave de acceso (por defecto: 2026):");
+  if (pin === "2026" || pin === "1234" || pin === "admin") {
+    toggleAdminView();
+  } else if (pin !== null) {
+    alert("❌ Clave incorrecta.");
+  }
+}
+
 function toggleAdminView() {
   const storeView = document.getElementById("store-view-wrapper");
   const adminView = document.getElementById("admin-view-wrapper");
-  const toggleBtn = document.getElementById("admin-toggle-btn");
 
   if (adminView.classList.contains("active")) {
     adminView.classList.remove("active");
     storeView.style.display = "block";
-    toggleBtn.innerHTML = "⚙️ Panel Negocio C&amp;C";
+    window.scrollTo({ top: 0, behavior: "smooth" });
   } else {
     adminView.classList.add("active");
     storeView.style.display = "none";
-    toggleBtn.innerHTML = "🛍️ Volver a la Tienda";
     renderAdminPanel();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
 
@@ -948,6 +1059,19 @@ function setupEventListeners() {
       renderProducts();
       renderCartDrawer();
     });
+  }
+
+  // Keyboard shortcut for Admin: Ctrl + Shift + A
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.shiftKey && (e.key === "A" || e.key === "a")) {
+      e.preventDefault();
+      openAdminSecure();
+    }
+  });
+
+  // Check URL hash for direct admin link (#admin)
+  if (window.location.hash === "#admin") {
+    setTimeout(openAdminSecure, 300);
   }
 }
 
